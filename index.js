@@ -31,6 +31,10 @@ try {
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
 
+app.use("/", (req, res) => {
+    res.send("Welcome to the Book Store API");
+});
+
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
 });
